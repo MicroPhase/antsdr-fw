@@ -1,6 +1,6 @@
 # antsdr-fw
 [ANTSDR Firmware](https://github.com/MicroPhase/antsdr-fw) for the [ANTSDR](https://item.taobao.com/item.htm?spm=a230r.1.14.16.34e21142YIlxqx&id=647986963313&ns=1&abbucket=2#detail) .
-This project is a fork of ADI  [ADALM-PLUTO ](https://github.com/analogdevicesinc/plutosdr-fw)
+This project is forked form ADI  [ADALM-PLUTO ](https://github.com/analogdevicesinc/plutosdr-fw)
 
 ![ANTSDR](./images/ANTSDR.png)
 ## Build Instructions
