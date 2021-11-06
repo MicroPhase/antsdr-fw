@@ -1,16 +1,16 @@
 [submodule "u-boot-xlnx"]
 	path = u-boot-xlnx
-	url = https://github.com/MicroPhase/u-boot-xlnx.git
+	url = https://github.com/bkerler/u-boot-xlnx.git
 	branch =  antsdr
 [submodule "buildroot"]
 	path = buildroot
-	url = https://github.com/MicroPhase/buildroot.git
+	url = https://github.com/bkerler/buildroot.git
 	branch = antsdr
 [submodule "linux"]
 	path = linux
-	url = https://github.com/MicroPhase/linux
+	url = https://github.com/bkerler/linux
 	branch = antsdr
 [submodule "hdl"]
 	path = hdl
-	url = https://github.com/MicroPhase/hdl
+	url = https://github.com/bkerler/hdl
 	branch = antsdr
