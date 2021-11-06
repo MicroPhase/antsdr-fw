@@ -12,5 +12,5 @@
 	branch = antsdr
 [submodule "hdl"]
 	path = hdl
-	url = https://github.com/bkerler/hdl
+	url = https://github.com/MicroPhase/hdl
 	branch = antsdr
