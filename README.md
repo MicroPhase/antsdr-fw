@@ -39,7 +39,8 @@ cd docker
 ~ cd antsdr-fw
 ~ sudo docker image build -t ant-build docker
 ~ sudo docker run -u $(id -u ${USER}):$(id -g ${USER}) -e DISPLAY=`hostname`:0 -it --rm -v $PWD:/home/antsdr/host -w /home/antsdr ant-build
-cd host
+git clone --recursive https://github.com/bkerler/antsdr-fw.git -b test
+cd antsdr-fw
 make
 make sdimg
 exit
