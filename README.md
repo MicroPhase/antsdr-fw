@@ -48,7 +48,8 @@ cd docker
 # make
 ```
 
-### Install build requirements
+### Build manually
+#### Install build requirements
 ```bash
 sudo apt-get install git build-essential fakeroot libncurses5-dev libssl-dev ccache 
 sudo apt-get install dfu-util u-boot-tools device-tree-compiler mtools
@@ -58,7 +59,7 @@ sudo apt-get purge gcc-arm-linux-gnueabihf
 sudo apt-get remove libfdt-dev
 ```
 
-### Get source code and setup bash
+#### Get source code and setup bash
 ```bash
 git clone --recursive https://github.com/bkerler/antsdr-fw.git -b test
 export CROSS_COMPILE=arm-linux-gnueabihf- 
@@ -67,14 +68,14 @@ export VIVADO_SETTINGS=/opt/Xilinx/Vivado/2019.1/settings64.sh
 export PERL_MM_OPT=
 ```
 
-### building ANTSDR firmware
-#### E310
+#### building ANTSDR firmware
+##### E310
 ```bash
-cd antsdr-fw 
+cd antsdr-fw
 make
 ```
 
-#### B220
+##### B220
 ```bash
 cd antsdr-fw 
 git checkout b220_v1.0
