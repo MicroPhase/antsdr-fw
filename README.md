@@ -19,7 +19,7 @@ The ANTSDR Firmware is built with the [Xilinx Vivado 2019.1](https://www.xilinx.
 
 ### Build using Docker
 ```bash
-git clone --recursive https://github.com/MicroPhase/antsdr-fw.git 
+git clone --recursive https://github.com/bkerler/antsdr-fw.git -b test
 cd antsdr-fw
 ```
 
