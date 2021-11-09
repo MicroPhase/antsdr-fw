@@ -8,7 +8,7 @@ RUN \
   apt upgrade -y && \
   apt -y --no-install-recommends install \
     ca-certificates curl gosu sudo xorg dbus dbus-x11 ubuntu-gnome-default-settings gtk2-engines \
-    ttf-ubuntu-font-family fonts-ubuntu-font-family-console fonts-droid-fallback lxappearance && \
+    ttf-ubuntu-font-family fonts-ubuntu-font-family-console fonts-droid-fallback lxappearance nano && \
   apt-get autoclean && \
   apt-get autoremove && \
   gosu nobody true && \

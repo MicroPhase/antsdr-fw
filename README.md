@@ -20,12 +20,13 @@ The ANTSDR Firmware is built with the [Xilinx Vivado 2019.1](https://www.xilinx.
 ### Build using Docker
 ```bash
 git clone --recursive https://github.com/MicroPhase/antsdr-fw.git 
+cd antsdr-fw
 ```
 
 #### Download Xilinx Vivado SDK 2019.1
 
 Download Xilinx_Vivado_SDK_2019.1_0524_1430.tar.gz from [here](https://www.xilinx.com/member/forms/download/
-xef-vivado.html?filename=Xilinx_Vivado_SDK_2019.1_0524_1430.tar.gz) and store it to the setup directory
+xef-vivado.html?filename=Xilinx_Vivado_SDK_2019.1_0524_1430.tar.gz) and store it to the docker/setup directory
 
 #### Install docker if needed:
 ```bash
@@ -35,20 +36,20 @@ cd docker
 
 #### Run docker and build
 ```bash
-~ cd antsdr-fw/docker
-~ sudo docker image build -t ant-build .
-~ sudo docker run -e DISPLAY=`hostname`:0 -it --rm -v $PWD:/home/antsdr/work -w /home/antsdr ant-build
-# git clone --recursive https://github.com/bkerler/antsdr-fw.git -b test
-# export FORCE_UNSAFE_CONFIGURE=1
-# export CROSS_COMPILE=arm-linux-gnueabihf- 
-# export PATH=$PATH:/opt/Xilinx/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin 
-# export VIVADO_SETTINGS=/opt/Xilinx/Vivado/2019.1/settings64.sh
-# export PERL_MM_OPT=
-# cd antsdr-fw
-# make
+~ cd antsdr-fw
+~ sudo docker image build -t ant-build docker
+~ sudo docker run -u $(id -u ${USER}):$(id -g ${USER}) -e DISPLAY=`hostname`:0 -it --rm -v $PWD:/home/antsdr/host -w /home/antsdr ant-build
+cd host
+make
+make sdimg
+exit
 ```
+The built files will be in the build / build_sdimg folder.
+Use `docker image rm ant-sdr` to remove the docker image.
+
 
 ### Build manually
+
 #### Install build requirements
 ```bash
 sudo apt-get install git build-essential fakeroot libncurses5-dev libssl-dev ccache 
