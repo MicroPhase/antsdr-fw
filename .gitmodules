@@ -4,13 +4,13 @@
 	branch =  antsdr
 [submodule "buildroot"]
 	path = buildroot
-	url = https://github.com/bkerler/buildroot.git
+	url = https://github.com/MicroPhase/buildroot.git
 	branch = antsdr
 [submodule "linux"]
 	path = linux
-	url = https://github.com/bkerler/linux
+	url = https://github.com/MicroPhase/linux
 	branch = antsdr
 [submodule "hdl"]
 	path = hdl
-	url = https://github.com/bkerler/hdl
+	url = https://github.com/MicroPhase/hdl
 	branch = antsdr
