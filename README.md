@@ -19,7 +19,7 @@ The ANTSDR Firmware is built with the [Xilinx Vivado 2019.1](https://www.xilinx.
 
 ### Build using Docker
 ```bash
-git clone --recursive https://github.com/bkerler/antsdr-fw.git -b test
+git clone --recursive https://github.com/MicroPhase/antsdr-fw.git
 cd antsdr-fw
 ```
 
@@ -39,7 +39,7 @@ cd docker
 ~ cd antsdr-fw
 ~ sudo docker image build -t ant-build docker
 ~ sudo docker run -u $(id -u ${USER}):$(id -g ${USER}) -e DISPLAY=`hostname`:0 -it --rm -v $PWD:/home/antsdr/host -w /home/antsdr ant-build
-git clone --recursive https://github.com/bkerler/antsdr-fw.git -b test
+git clone --recursive https://github.com/MicroPhase/antsdr-fw.git
 cd antsdr-fw
 make
 make sdimg
@@ -63,7 +63,7 @@ sudo apt-get remove libfdt-dev
 
 #### Get source code and setup bash
 ```bash
-git clone --recursive https://github.com/bkerler/antsdr-fw.git -b test
+git clone --recursive https://github.com/MicroPhase/antsdr-fw.git
 export CROSS_COMPILE=arm-linux-gnueabihf- 
 export PATH=$PATH:/opt/Xilinx/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin 
 export VIVADO_SETTINGS=/opt/Xilinx/Vivado/2019.1/settings64.sh
