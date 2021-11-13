@@ -38,7 +38,7 @@ cd docker
 ```bash
 ~ cd antsdr-fw
 ~ sudo docker image build -t ant-build docker
-~ sudo docker run -u $(id -u ${USER}):$(id -g ${USER}) -e DISPLAY=`hostname`:0 -it --rm -v $PWD:/home/antsdr/host -w /home/antsdr ant-build
+~ sudo docker run -e DISPLAY=`hostname`:0 -it --rm -v $PWD:/home/antsdr/host -w /home/antsdr ant-build
 git clone --recursive https://github.com/MicroPhase/antsdr-fw.git
 cd antsdr-fw
 make
