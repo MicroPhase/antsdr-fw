@@ -40,8 +40,18 @@ RUN \
     --config /setup/config.txt && \
   rm -rf /setup
 
+USER root
 COPY setenv.sh /usr/local/bin/setenv.sh
 RUN chmod +x /usr/local/bin/setenv.sh
-ENTRYPOINT ["/usr/local/bin/setenv.sh"]
+RUN groupadd -g 1000 antsdr
+RUN useradd -d /home/antsdr -s /bin/bash -m antsdr -u 1000 -g 1000
 
+USER antsdr
+WORKDIR /home/antsdr
+
+ENV DISPLAY :0
+ENV GEOMETRY 1920x1200
+ENV HOME /home/antsdr 
+
+ENTRYPOINT ["/usr/local/bin/setenv.sh"]
 CMD ["/bin/bash", "-l"]
